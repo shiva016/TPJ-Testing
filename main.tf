@@ -106,7 +106,7 @@ resource "aws_security_group" "allow_all" {
 
 
  resource "aws_instance" "web-1" {
-    #ami = var.imagename
+    ami = var.imagename
     # ami = "${data.aws_ami.my_ami.id}"
      #ami = "ami-098f16afa9edf40be"
       availability_zone = "us-east-1a"
