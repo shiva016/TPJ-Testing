@@ -98,11 +98,11 @@ resource "aws_security_group" "allow_all" {
     }
 }
 
-data "aws_ami" "my_ami" {
-     most_recent      = true
-     #name_regex       = "^shiva016"
-     owners           = ["202966514571"]
-}
+# data "aws_ami" "my_ami" {
+#      most_recent      = true
+#      #name_regex       = "^shiva016"
+#      owners           = ["202966514571"]
+# }
 
 
  resource "aws_instance" "web-1" {
