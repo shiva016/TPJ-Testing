@@ -4,6 +4,13 @@ provider "aws" {
     secret_key = "${var.aws_secret_key}"
     region = "${var.aws_region}"
 }
+terraform {
+    backend "s3"{
+        bucket = "shivajenkins"
+        key = "myterraform.tfstate"
+        region = "us-east-1"
+    }
+}
 
 resource "aws_vpc" "default" {
     cidr_block = "${var.vpc_cidr}"
@@ -99,7 +106,8 @@ data "aws_ami" "my_ami" {
 
 
  resource "aws_instance" "web-1" {
-     ami = "${data.aws_ami.my_ami.id}"
+    ami = var.imagename
+    # ami = "${data.aws_ami.my_ami.id}"
      #ami = "ami-098f16afa9edf40be"
       availability_zone = "us-east-1a"
       instance_type = "t2.micro"
