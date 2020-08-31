@@ -91,28 +91,28 @@ resource "aws_security_group" "allow_all" {
     }
 }
 
-# data "aws_ami" "my_ami" {
-#      most_recent      = true
-#      #name_regex       = "^shiva016"
-#      owners           = ["202966514571"]
-#}
+data "aws_ami" "my_ami" {
+     most_recent      = true
+     #name_regex       = "^shiva016"
+     owners           = ["202966514571"]
+}
 
 
  resource "aws_instance" "web-1" {
-     #ami = "${data.aws_ami.my_ami.id}"
-     ami = "ami-098f16afa9edf40be"
-     availability_zone = "us-east-1a"
-     instance_type = "t2.micro"
-     key_name = "LaptopKey"
-     subnet_id = "${aws_subnet.subnet1-public.id}"
-     vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
-     associate_public_ip_address = true	
-     tags = {
-         Name = "Server-1"
-         Env = "Prod"
-         Owner = "Sree"
- 	CostCenter = "ABCD"
-     }
+     ami = "${data.aws_ami.my_ami.id}"
+     #ami = "ami-098f16afa9edf40be"
+    #  availability_zone = "us-east-1a"
+    #  instance_type = "t2.micro"
+    #  key_name = "LaptopKey"
+    #  subnet_id = "${aws_subnet.subnet1-public.id}"
+    #  vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+    #  associate_public_ip_address = true	
+    #  tags = {
+    #      Name = "Server-1"
+    #      Env = "Prod"
+    #      Owner = "Sree"
+ 	# CostCenter = "ABCD"
+    #  }
  }
 
 ##output "ami_id" {
