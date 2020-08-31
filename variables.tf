@@ -60,48 +60,48 @@ variable "instance_type" {
 
 
 
-variable "access_key" {
-    type = string
-    default = "AKIAI7U2L4HV7DFHXVWA"
-}
-
-variable "secret_key" {
-type = string
-default = "CLhpq80IoP8xzzmDNdJP5PPR1e6ZAL/278YBX9P3"
-
-}
-variable "aws_region" {
-    type = string
-    default = "us-east-1"
-}
-
-variable "vpc_cidr" {
-    type = string
-    default = "176.18.0.0/16"
-}
-variable "vpc_name" {
-     type = string
-     default = "MyVpc1"
-
-}
-# variable "IGW_name" {
-    
+# variable "access_key" {
+#     type = string
+#     default = "AKIAI7U2L4HV7DFHXVWA"
 # }
-# variable "key_name" {}
-variable "vpc_subnet1_cidr" {
-    type = string
-    default = "176.18.1.0/24"
-}
 
-variable "vpc_subnet2_cidr" {
-    type = string
-    default = "176.18.2.0/24"
-}
+# variable "secret_key" {
+# type = string
+# default = "CLhpq80IoP8xzzmDNdJP5PPR1e6ZAL/278YBX9P3"
 
-variable "bucket_name"{
-    type = string
-    default = "terraformtraining1"
-}
+# }
+# variable "aws_region" {
+#     type = string
+#     default = "us-east-1"
+# }
+
+# variable "vpc_cidr" {
+#     type = string
+#     default = "176.18.0.0/16"
+# }
+# variable "vpc_name" {
+#      type = string
+#      default = "MyVpc1"
+
+# }
+# # variable "IGW_name" {
+    
+# # }
+# # variable "key_name" {}
+# variable "vpc_subnet1_cidr" {
+#     type = string
+#     default = "176.18.1.0/24"
+# }
+
+# variable "vpc_subnet2_cidr" {
+#     type = string
+#     default = "176.18.2.0/24"
+# }
+
+# variable "bucket_name"{
+#     type = string
+#     default = "terraformtraining1"
+#}
 
 # variable "public_subnet1_cidr" {}
 # variable "public_subnet2_cidr" {}
